@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/logo.svg">
+    <title>Kalkulator by Bintang Surya</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <button class="switch-mode">Dark Mode</button>
+
+    <div class="calculator">
+        <input type="text" class="display" disabled>
+        <div class="buttons">
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="operator">/</button>
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="operator">*</button>
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="operator">-</button>
+            <button class="number">0</button>
+            <button class="number">C</button>
+            <button class="operator">=</button>
+            <button class="operator">+</button>
+        </div>
+    </div>
+
+    <script>
+        const display = document.querySelector(".display");
+        const buttons = document.querySelectorAll(".buttons button");
+        const switchMode = document.querySelector(".switch-mode");
+        const body = document.body;
+
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                const value = button.textContent;
+
+                if (!isNaN(value)) { 
+                    if (value === "0" && display.value === "") return;
+                    display.value += value;
+                } else if (value === "C") {
+                    display.value = "";
+                } else if (value === "=") {
+                    if(display.value === "" || display.value === "-") return;
+                    try {
+                        display.value = eval(display.value);
+                        display.classList.add("show-result");
+                        setTimeout(() => display.classList.remove("show-result"), 300);
+                    } catch {
+                        display.value = "Error";
+                    }
+                } else { 
+                    if (display.value === "" && value !== "-") return;
+                    if (display.value !== "" && isNaN(display.value.slice(-1))) return;
+                    display.value += value;
+                }
+            });
+        });
+
+        switchMode.addEventListener("click", () => {
+            body.classList.toggle("dark-mode");
+            if (body.classList.contains("dark-mode")) {
+                switchMode.textContent = "Light Mode";
+            } else {
+                switchMode.textContent = "Dark Mode";
+            }
+        });
+    </script>
+</body>
+</html>
