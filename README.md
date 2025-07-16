@@ -81,14 +81,13 @@ Kontribusi sangat welcome! Silakan:
 
 ## 📄 Lisensi
 
-MIT © 2025 — dibuat oleh BintangSry
+dibuat oleh BintangSry
 
 ---
 
 ## 📌 Kontak
 
-Jika ada pertanyaan atau ide:
-- Instagram/Twitter: `@BintangSry`  
+Jika ada pertanyaan atau ide: 
 - Email: misal `bintangsry31@gmail.com` (jika mau ditambahkan)
 
 ---
