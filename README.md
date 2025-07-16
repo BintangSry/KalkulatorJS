@@ -21,17 +21,6 @@ Sebuah **kalkulator sederhana berbasis web** menggunakan **HTML**, **CSS**, dan 
 
 ---
 
-## 📁 Struktur Direktori
-
-```
-KalkulatorJS/
-├─ index.html           # Tampilan halaman kalkulator
-├─ style.css            # Styling untuk UI
-└─ app.js               # Logika kalkulasi (event handling & evaluasi)
-```
-
----
-
 ## 🚀 Cara Menjalankan
 
 1. Clone repo:
@@ -100,7 +89,7 @@ MIT © 2025 — dibuat oleh BintangSry
 
 Jika ada pertanyaan atau ide:
 - Instagram/Twitter: `@BintangSry`  
-- Email: misal `bintangsry@example.com` (jika mau ditambahkan)
+- Email: misal `bintangsry31@gmail.com` (jika mau ditambahkan)
 
 ---
 
